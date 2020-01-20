@@ -1,7 +1,9 @@
 package com.wlima.minhasfinancas.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -9,6 +11,7 @@ import javax.persistence.*;
 @Table(name = "usuario", schema = "financas")
 @Data
 @Builder
+@NoArgsConstructor
 public class Usuario {
 
     @Id
@@ -22,7 +25,7 @@ public class Usuario {
     @Column(name = "email")
     private String email;
 
-    @Column(name = senha)
+    @Column(name = "senha")
     private String senha;
 
 }
