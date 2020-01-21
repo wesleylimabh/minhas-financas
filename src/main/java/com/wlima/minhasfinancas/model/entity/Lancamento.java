@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.convert.Jsr310Converters;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 
     @Id
@@ -41,7 +43,7 @@ public class Lancamento {
     private BigDecimal valor;
 
     @Column(name = "data_cadastro")
-    @Convert(converter = Jsr310Converters.LocalDateToDateConverter.class)
+    @DateTimeFormat
     private LocalDate dataCadastro;
 
     @Column(name = "tipo")
