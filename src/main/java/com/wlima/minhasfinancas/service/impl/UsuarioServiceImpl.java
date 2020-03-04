@@ -42,7 +42,6 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Usuario salvarUsuario(Usuario usuario) {
         validarEmail(usuario.getEmail());
         return repository.save(usuario);
-
     }
 
     @Override
